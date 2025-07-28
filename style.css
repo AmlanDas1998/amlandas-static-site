@@ -114,7 +114,7 @@ nav a.active {
   color: #0077cc;
 }
 
-/* Blog Preview Section */
+/* General Container */
 .container {
   max-width: 900px;
   margin: 40px auto;
@@ -127,6 +127,7 @@ h3 {
   color: #222;
 }
 
+/* Blog Post Cards */
 .post-card {
   background: #fff;
   padding: 20px;
@@ -149,6 +150,7 @@ h3 {
   text-decoration: underline;
 }
 
+/* Footer */
 footer {
   background: #f0f0f0;
   text-align: center;
@@ -161,4 +163,102 @@ footer {
 footer a {
   color: #0077cc;
   text-decoration: none;
+}
+
+/* 📄 About Page */
+.about-section {
+  padding: 40px 20px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* 💼 Skills Page */
+.skills-section {
+  padding: 40px 20px;
+}
+
+.skill-tag {
+  display: inline-block;
+  background: #0077cc;
+  color: white;
+  padding: 6px 12px;
+  margin: 8px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* 🧭 Journey Timeline */
+.timeline {
+  position: relative;
+  margin: 40px 0;
+  padding-left: 30px;
+  border-left: 2px solid #ccc;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background: #0077cc;
+  border-radius: 50%;
+}
+
+.timeline-item h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.timeline-item .org {
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.timeline-item .date {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* 📬 Contact Page */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.contact-card {
+  background-color: #fdfdfd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  width: 280px;
+  text-align: center;
+}
+
+.contact-card h3 {
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+.contact-card a {
+  color: #333;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  color: #0077cc;
 }
