@@ -2,147 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Journey - Amlan Das</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Journey – Amlan Das</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .timeline {
-      position: relative;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 0;
-    }
-
-    .timeline::after {
-      content: '';
-      position: absolute;
-      width: 4px;
-      background-color: #0077cc;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -2px;
-    }
-
-    .timeline-entry {
-      padding: 20px 40px;
-      position: relative;
-      background: white;
-      border-radius: 8px;
-      width: 45%;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .timeline-entry.left {
-      left: 0;
-    }
-
-    .timeline-entry.right {
-      left: 55%;
-    }
-
-    .timeline-entry::before {
-      content: "";
-      position: absolute;
-      top: 20px;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: #0077cc;
-      border: 4px solid #fff;
-      z-index: 1;
-    }
-
-    .timeline-entry.left::before {
-      right: -12px;
-    }
-
-    .timeline-entry.right::before {
-      left: -12px;
-    }
-
-    .timeline-entry h3 {
-      margin-top: 0;
-    }
-
-    .company-logo {
-      height: 32px;
-      vertical-align: middle;
-      margin-right: 10px;
-    }
-
-    .date {
-      font-weight: bold;
-      color: #0077cc;
-      margin-bottom: 10px;
-    }
-
-    @media screen and (max-width: 768px) {
-      .timeline::after {
-        left: 10px;
-      }
-
-      .timeline-entry {
-        width: 90%;
-        left: 0 !important;
-        margin-left: 30px;
-      }
-
-      .timeline-entry.left::before,
-      .timeline-entry.right::before {
-        left: -30px;
-      }
-    }
-  </style>
 </head>
 <body>
+
   <header>
-    <h1>My Journey</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="journey.html" class="active">My Journey</a>
-      <a href="contact.html">Contact</a>
-      <a href="blog.html">Blog</a>
-    </nav>
+    <h1>My Career Journey</h1>
+    <button id="darkToggle" class="dark-toggle">🌙</button>
   </header>
 
-  <main>
-    <section class="timeline">
-      <div class="timeline-entry left">
-        <div class="date">May 2025 – Present</div>
-        <h3><img src="assets/logos/finvu.png" alt="Finvu" class="company-logo"> Account Manager – Finvu</h3>
-        <p>Driving adoption of Account Aggregator ecosystem, collaborating with NBFCs and ecosystem players, and promoting scalable, consent-driven data sharing.</p>
-      </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="journey.html" class="active">My Journey</a>
+    <a href="skills.html">Skills</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+  </nav>
 
-      <div class="timeline-entry right">
-        <div class="date">Jun 2022 – Jun 2025</div>
-        <h3><img src="assets/logos/poonawalla.png" alt="Poonawalla Fincorp" class="company-logo"> Assistant Manager – Poonawalla Fincorp</h3>
-        <p>Led product strategy and development across lending workflows, integrated AA and CKYC, and worked cross-functionally with compliance and risk teams.</p>
+  <main class="container timeline">
+    
+    <div class="timeline-item">
+      <div class="timeline-date">May 2025 – Present</div>
+      <div class="timeline-content">
+        <h3>Account Manager – Finvu (Cookiejar Technologies)</h3>
+        <p>Leading FI & ecosystem partner integrations under the Account Aggregator framework to enable secure, consent-driven data access. Driving outreach and adoption of DPI in lending.</p>
       </div>
+    </div>
 
-      <div class="timeline-entry left">
-        <div class="date">Jun 2022 – Aug 2022</div>
-        <h3><img src="assets/logos/poonawalla.png" alt="Poonawalla Fincorp" class="company-logo"> Management Trainee – Poonawalla Fincorp</h3>
-        <p>Contributed to digital lending go-to-market strategies, customer journey mapping, and internal product design sprints.</p>
+    <div class="timeline-item">
+      <div class="timeline-date">Jun 2022 – Jun 2025</div>
+      <div class="timeline-content">
+        <h3>Assistant Manager – Poonawalla Fincorp</h3>
+        <p>Managed digital loan products and supported new launches through product-market fit analysis, process improvement, and cross-functional coordination.</p>
       </div>
+    </div>
 
-      <div class="timeline-entry right">
-        <div class="date">Jan 2021 – May 2022</div>
-        <h3><img src="assets/logos/isbm.png" alt="ISBM" class="company-logo"> Coordinator – ISBM</h3>
-        <p>Managed advertising and internal operations at ISBM, improving outreach effectiveness and streamlining workflows.</p>
+    <div class="timeline-item">
+      <div class="timeline-date">Jun 2022 – Aug 2022</div>
+      <div class="timeline-content">
+        <h3>Management Trainee – Poonawalla Fincorp</h3>
+        <p>Supported Product Managers in conceptualizing new credit products and documenting technical & user journeys.</p>
       </div>
+    </div>
 
-      <div class="timeline-entry left">
-        <div class="date">Aug 2019 – Jun 2020</div>
-        <h3><img src="assets/logos/amazon.png" alt="Amazon" class="company-logo"> CS Associate – Amazon</h3>
-        <p>Handled customer success operations for Prime members, maintaining high satisfaction scores and issue resolution efficiency.</p>
+    <div class="timeline-item">
+      <div class="timeline-date">Jan 2021 – May 2022</div>
+      <div class="timeline-content">
+        <h3>Coordinator – ISBM Pune</h3>
+        <p>Improved internal process workflows and supported event marketing and student communication. Mentored peers in operations and content strategy.</p>
       </div>
-    </section>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">Aug 2019 – Jun 2020</div>
+      <div class="timeline-content">
+        <h3>CS Associate – Amazon India</h3>
+        <p>Provided support to digital product (DP) customers, resolving high-priority issues and improving user satisfaction through quality service and escalation control.</p>
+      </div>
+    </div>
+
   </main>
 
   <footer>
-    <p>&copy; 2025 Amlan Das</p>
+    © 2025 Amlan Das • <a href="mailto:contact@amlandas.in">contact@amlandas.in</a> • 
+    <a href="https://www.linkedin.com/in/amlan-das-600839140/">LinkedIn</a>
   </footer>
+
+  <button id="backToTop" class="back-to-top">↑</button>
+  <script src="script.js"></script>
+
 </body>
 </html>
