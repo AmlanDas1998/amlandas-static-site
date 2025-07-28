@@ -9,9 +9,8 @@
 <body>
 
   <header>
-    <h1>Amlan Das</h1>
-    <p>Account Aggregator Professional • Fintech • India</p>
-    <a href="assets/AmlanDasCV.pdf" class="download" download>📄 Download CV</a>
+    <h1>Contact Me</h1>
+    <button id="darkToggle" class="dark-toggle">🌙</button>
   </header>
 
   <nav>
@@ -23,34 +22,28 @@
     <a href="blog.html">Blog</a>
   </nav>
 
-  <main class="hero">
-    <section class="hero-text">
-      <h2>📬 Let’s Connect</h2>
-      <p>Feel free to reach out for collaborations, partnerships, or a friendly conversation.</p>
-    </section>
+  <main class="container">
+    <form class="contact-form">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name" />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" placeholder="Enter your email" />
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" placeholder="Type your message"></textarea>
+
+      <button type="submit">Send</button>
+    </form>
   </main>
-
-  <section class="container contact-section">
-    <div class="card contact-card">
-      <h3>📧 Email</h3>
-      <p><a href="mailto:contact@amlandas.in">contact@amlandas.in</a></p>
-    </div>
-
-    <div class="card contact-card">
-      <h3>💼 LinkedIn</h3>
-      <p><a href="https://www.linkedin.com/in/amlan-das-600839140/" target="_blank">linkedin.com/in/amlan-das-600839140</a></p>
-    </div>
-
-    <div class="card contact-card">
-      <h3>🌐 Website</h3>
-      <p><a href="https://amlandas.in" target="_blank">www.amlandas.in</a></p>
-    </div>
-  </section>
 
   <footer>
     © 2025 Amlan Das • <a href="mailto:contact@amlandas.in">contact@amlandas.in</a> • 
     <a href="https://www.linkedin.com/in/amlan-das-600839140/">LinkedIn</a>
   </footer>
+
+  <button id="backToTop" class="back-to-top">↑</button>
+  <script src="script.js"></script>
 
 </body>
 </html>
