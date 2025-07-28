@@ -1,45 +1,60 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-body {
-  font-family: 'Inter', sans-serif;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
   color: #222;
-  background-color: #f9f9f9;
+  line-height: 1.6;
 }
 
-a {
-  text-decoration: none;
-  color: #0077cc;
-  transition: color 0.3s ease;
-}
-a:hover {
-  color: #005999;
-}
-
-header {
-  background-color: #004d4d;
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #007777, #00b3b3);
   color: white;
   padding: 60px 20px;
   text-align: center;
 }
 
-header h1 {
+.hero h1 {
   font-size: 2.8rem;
   margin-bottom: 10px;
 }
 
-header p {
+.hero p {
   font-size: 1.2rem;
-  margin-top: 5px;
-  color: #d1e7e7;
+  color: #e0f7f7;
 }
 
-nav {
+.hero-buttons a {
+  display: inline-block;
+  margin: 12px;
+  padding: 10px 22px;
   background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
+  color: #007777;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.hero-buttons a:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+/* Navigation */
+nav {
+  background-color: white;
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
   text-align: center;
   position: sticky;
   top: 0;
@@ -47,102 +62,75 @@ nav {
 }
 
 nav a {
-  margin: 0 20px;
-  color: #004d4d;
+  margin: 0 18px;
+  color: #007777;
   font-weight: 600;
   font-size: 1rem;
-  padding-bottom: 4px;
-  border-bottom: 3px solid transparent;
+  text-decoration: none;
+  padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
 }
 
 nav a.active,
 nav a:hover {
-  border-bottom: 3px solid #00cccc;
-  color: #007777;
-}
-
-.hero {
-  background-color: #e6f7f7;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.hero h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
+  border-bottom: 2px solid #00b3b3;
   color: #004d4d;
 }
 
-.hero p {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto 20px auto;
-  color: #333;
-}
-
-.hero .buttons a {
-  display: inline-block;
-  background-color: #00cccc;
-  color: white;
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
-
-.hero .buttons a:hover {
-  background-color: #009999;
-}
-
-main {
+/* Main content */
+.container {
   max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-section {
-  margin-bottom: 60px;
-}
-
-section h3 {
-  font-size: 1.8rem;
+section h2 {
+  font-size: 2rem;
   margin-bottom: 20px;
   color: #004d4d;
 }
 
+section p {
+  font-size: 1.05rem;
+  color: #444;
+}
+
+/* Card and form styles */
 .card {
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 20px;
-  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  margin-bottom: 30px;
 }
 
 form input,
 form textarea {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
   border-radius: 6px;
-  font-family: 'Inter', sans-serif;
+  margin-bottom: 15px;
+  font-size: 1rem;
 }
 
 form button {
-  background-color: #00cccc;
-  border: none;
-  padding: 10px 20px;
+  background-color: #00b3b3;
   color: white;
+  padding: 10px 20px;
+  border: none;
   font-weight: 600;
   border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 form button:hover {
-  background-color: #009999;
+  background-color: #007777;
 }
 
+/* Footer */
 footer {
   background-color: #004d4d;
   color: white;
@@ -150,4 +138,16 @@ footer {
   padding: 20px;
   font-size: 0.9rem;
   margin-top: 60px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  nav a {
+    margin: 0 10px;
+    font-size: 0.95rem;
+  }
 }
