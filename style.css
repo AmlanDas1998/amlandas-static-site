@@ -1,24 +1,32 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #fdfdfd;
+  background: #f9fbfd;
   color: #222;
+  line-height: 1.6;
 }
 
+/* Header */
 header {
   background: #ffffff;
   text-align: center;
   padding: 40px 20px 20px;
   border-bottom: 1px solid #eee;
+  animation: fadeInDown 0.8s ease;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.4rem;
-  color: #222;
+  font-size: 2.6rem;
+  color: #002d5f;
 }
 
 header p {
@@ -36,19 +44,24 @@ header p {
   border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .download:hover {
   background: #005fa3;
+  transform: scale(1.05);
 }
 
+/* Navigation */
 nav {
   background-color: #ffffff;
   padding: 12px 0;
   text-align: center;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav a {
@@ -60,7 +73,7 @@ nav a {
   font-size: 1rem;
   padding: 6px 10px;
   border-radius: 4px;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 nav a:hover {
@@ -75,31 +88,36 @@ nav a.active {
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px 60px;
   background: linear-gradient(to right, #e0f7fa, #f1f8e9);
   border-bottom: 1px solid #ccc;
+  animation: fadeIn 1s ease;
 }
 
 .hero-text h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  color: #003366;
 }
 
 .hero-text p {
   font-size: 1.2rem;
   color: #444;
+  max-width: 700px;
+  margin: 0 auto 30px;
 }
 
 .hero-buttons .btn {
   display: inline-block;
   margin: 10px 10px;
-  padding: 10px 20px;
+  padding: 12px 24px;
   background: #0077cc;
   color: #fff;
   border-radius: 8px;
   text-decoration: none;
-  font-weight: 500;
-  transition: background 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .hero-buttons .btn.secondary {
@@ -108,17 +126,19 @@ nav a.active {
 
 .hero-buttons .btn:hover {
   background: #005fa3;
+  transform: translateY(-2px);
 }
 
 .highlight {
   color: #0077cc;
 }
 
-/* General Container */
+/* Section Container */
 .container {
   max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
+  animation: fadeInUp 1s ease;
 }
 
 h3 {
@@ -133,7 +153,13 @@ h3 {
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
-  box-shadow: 0px 0px 5px rgba(0,0,0,0.05);
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
 }
 
 .post-card h3 {
@@ -165,100 +191,70 @@ footer a {
   text-decoration: none;
 }
 
-/* 📄 About Page */
-.about-section {
-  padding: 40px 20px;
-  line-height: 1.7;
-  color: #333;
-}
-
-.about-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-/* 💼 Skills Page */
-.skills-section {
-  padding: 40px 20px;
-}
-
-.skill-tag {
-  display: inline-block;
-  background: #0077cc;
-  color: white;
-  padding: 6px 12px;
-  margin: 8px;
-  border-radius: 6px;
-  font-size: 0.95rem;
-}
-
-/* 🧭 Journey Timeline */
-.timeline {
-  position: relative;
-  margin: 40px 0;
-  padding-left: 30px;
-  border-left: 2px solid #ccc;
-}
-
-.timeline-item {
-  margin-bottom: 30px;
-  position: relative;
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -10px;
-  top: 0;
-  width: 16px;
-  height: 16px;
-  background: #0077cc;
-  border-radius: 50%;
-}
-
-.timeline-item h4 {
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-.timeline-item .org {
-  font-weight: 600;
-  margin: 4px 0;
-}
-
-.timeline-item .date {
-  font-size: 0.9rem;
-  color: #777;
-}
-
-/* 📬 Contact Page */
-.contact-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-.contact-card {
-  background-color: #fdfdfd;
-  padding: 20px;
-  border-radius: 8px;
+/* Contact Form Styles */
+.contact-form {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  width: 280px;
-  text-align: center;
 }
 
-.contact-card h3 {
-  color: #0077cc;
-  margin-bottom: 10px;
-}
-
-.contact-card a {
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
   color: #333;
-  text-decoration: none;
 }
 
-.contact-card a:hover {
-  color: #0077cc;
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #0077cc;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #005fa3;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+  .hero-buttons .btn {
+    margin: 8px 5px;
+    padding: 10px 18px;
+  }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
