@@ -1,47 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amlan Das | Home</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-</head>
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background-color: #f9f9f9;
+}
 
-<body>
-  <header class="hero">
-    <div class="container">
-      <h1>Hello, I'm Amlan Das</h1>
-      <p>Financial Services Professional | Account Aggregator Ecosystem</p>
-      <div class="hero-buttons">
-        <a href="/cv.html" class="btn">Download CV</a>
-        <a href="mailto:contact@amlandas.in" class="btn-outline">Email Me</a>
-        <a href="https://www.linkedin.com/in/amlan-das-600839140/" class="btn-outline" target="_blank">LinkedIn</a>
-      </div>
-    </div>
-  </header>
+a {
+  text-decoration: none;
+  color: #0077cc;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #005999;
+}
 
-  <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="about.html">About</a>
-    <a href="journey.html">My Journey</a>
-    <a href="contact.html">Contact</a>
-    <a href="blog.html">Blog</a>
-  </nav>
+header {
+  background-color: #004d4d;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
 
-  <main class="container">
-    <section class="intro">
-      <h2>Welcome to My Website</h2>
-      <p>This site is my digital portfolio and blog. I share insights from my work in the financial services industry, especially around India’s Account Aggregator framework.</p>
-      <p>Check out my <a href="/cv.html">resume</a>, follow my <a href="blog.html">blog posts</a>, or reach out via <a href="contact.html">contact form</a>.</p>
-    </section>
-  </main>
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
 
-  <footer>
-    <p>&copy; 2025 Amlan Das. All rights reserved.</p>
-  </footer>
-</body>
+header p {
+  font-size: 1.2rem;
+  margin-top: 5px;
+  color: #d1e7e7;
+}
 
-</html>
+nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  margin: 0 20px;
+  color: #004d4d;
+  font-weight: 600;
+  font-size: 1rem;
+  padding-bottom: 4px;
+  border-bottom: 3px solid transparent;
+}
+
+nav a.active,
+nav a:hover {
+  border-bottom: 3px solid #00cccc;
+  color: #007777;
+}
+
+.hero {
+  background-color: #e6f7f7;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #004d4d;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  color: #333;
+}
+
+.hero .buttons a {
+  display: inline-block;
+  background-color: #00cccc;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.hero .buttons a:hover {
+  background-color: #009999;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #004d4d;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+}
+
+form button {
+  background-color: #00cccc;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #009999;
+}
+
+footer {
+  background-color: #004d4d;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
