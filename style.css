@@ -1,153 +1,164 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 body {
+  margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #f8fafc;
+  background: #fdfdfd;
   color: #222;
-  line-height: 1.6;
+}
+
+header {
+  background: #ffffff;
+  text-align: center;
+  padding: 40px 20px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  color: #222;
+}
+
+header p {
+  margin-top: 10px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.download {
+  display: inline-block;
+  margin-top: 15px;
+  background: #0077cc;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.download:hover {
+  background: #005fa3;
+}
+
+nav {
+  background-color: #ffffff;
+  padding: 12px 0;
+  text-align: center;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0 18px;
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #e0f0ff;
+}
+
+nav a.active {
+  background-color: #0077cc;
+  color: white;
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to right, #007777, #00b3b3);
-  color: white;
-  padding: 60px 20px;
   text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+  border-bottom: 1px solid #ccc;
 }
 
-.hero h1 {
-  font-size: 2.8rem;
+.hero-text h2 {
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-.hero p {
+.hero-text p {
   font-size: 1.2rem;
-  color: #e0f7f7;
+  color: #444;
 }
 
-.hero-buttons a {
+.hero-buttons .btn {
   display: inline-block;
-  margin: 12px;
-  padding: 10px 22px;
-  background-color: #ffffff;
-  color: #007777;
-  border-radius: 6px;
-  font-weight: 600;
+  margin: 10px 10px;
+  padding: 10px 20px;
+  background: #0077cc;
+  color: #fff;
+  border-radius: 8px;
   text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+  transition: background 0.3s ease;
 }
 
-.hero-buttons a:hover {
-  background-color: #f0f0f0;
-  transform: translateY(-2px);
+.hero-buttons .btn.secondary {
+  background: #555;
 }
 
-/* Navigation */
-nav {
-  background-color: white;
-  border-bottom: 1px solid #eee;
-  padding: 12px 0;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+.hero-buttons .btn:hover {
+  background: #005fa3;
 }
 
-nav a {
-  margin: 0 18px;
-  color: #007777;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  padding-bottom: 6px;
-  border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
+.highlight {
+  color: #0077cc;
 }
 
-nav a.active,
-nav a:hover {
-  border-bottom: 2px solid #00b3b3;
-  color: #004d4d;
-}
-
-/* Main content */
+/* Blog Preview Section */
 .container {
   max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-section h2 {
-  font-size: 2rem;
+h3 {
+  font-size: 1.6rem;
   margin-bottom: 20px;
-  color: #004d4d;
+  color: #222;
 }
 
-section p {
-  font-size: 1.05rem;
-  color: #444;
+.post-card {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.05);
 }
 
-/* Card and form styles */
-.card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  padding: 24px;
-  margin-bottom: 30px;
+.post-card h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
 }
 
-form input,
-form textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  margin-bottom: 15px;
-  font-size: 1rem;
+.post-card a {
+  color: #0077cc;
+  text-decoration: none;
 }
 
-form button {
-  background-color: #00b3b3;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  font-weight: 600;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.post-card a:hover {
+  text-decoration: underline;
 }
 
-form button:hover {
-  background-color: #007777;
-}
-
-/* Footer */
 footer {
-  background-color: #004d4d;
-  color: white;
+  background: #f0f0f0;
   text-align: center;
   padding: 20px;
+  margin-top: 40px;
   font-size: 0.9rem;
-  margin-top: 60px;
+  color: #555;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  nav a {
-    margin: 0 10px;
-    font-size: 0.95rem;
-  }
+footer a {
+  color: #0077cc;
+  text-decoration: none;
 }
